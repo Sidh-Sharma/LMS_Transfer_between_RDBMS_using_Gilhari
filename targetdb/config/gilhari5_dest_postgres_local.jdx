@@ -1,0 +1,18 @@
+JDX_DATABASE JDX:jdbc:postgresql://host.docker.internal:5432/db2;USER=testdb;PASSWORD=software_dest5;JDX_DBTYPE=POSTGRES;DEBUG_LEVEL=3
+JDBC_DRIVER org.postgresql.Driver
+JDX_OBJECT_MODEL_PACKAGE com.mycompany.gilhari5
+JDX_SUPERCLASS_NAME com.softwaretree.jdx.JDX_JSONObject
+;
+
+CLASS .LoanHist TABLE loans
+    VIRTUAL_ATTRIB sno ATTRIB_TYPE int
+    VIRTUAL_ATTRIB book_id ATTRIB_TYPE int
+    VIRTUAL_ATTRIB loan_id ATTRIB_TYPE int
+    VIRTUAL_ATTRIB member_id ATTRIB_TYPE int
+    VIRTUAL_ATTRIB return_date ATTRIB_TYPE java.lang.String
+    VIRTUAL_ATTRIB loan_date ATTRIB_TYPE java.lang.String
+    
+    PRIMARY_KEY sno
+    SQLMAP FOR sno SQLTYPE 'INTEGER AUTO_INCREMENT'
+
+;
