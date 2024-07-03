@@ -1,3 +1,7 @@
 /sourcedb/config/*.jar
 /sourcedb/bin
+/sourcedb/libs
 /reveng/*.revjdx
+/targetdb/config/*.jar
+/targetdb/bin
+/targetdb/libs
