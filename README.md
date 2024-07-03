@@ -1,4 +1,4 @@
-# Library management system using Gilhari microservice
+# Library Management System using Gilhari microservice
 ## Overview ##
 This project is an example of how Gilhari microservice framework can be used to transfer (JSON) data between two relational databases of different kinds (MySQL and Postgres).
 The project shows:
