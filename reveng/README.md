@@ -1,8 +1,8 @@
-This directory demonstrates the reverse-engineering feature of JDX ORM such that given a template file identifying some existing tables in a database, JDX can generate the corresponding class definitions and the mapping specification.
+This directory demonstrates the reverse-engineering feature of Gilhari and JDX ORM such that given a template file identifying some existing tables in a database, JDX can generate the corresponding class definitions and the mapping specification.
 
 This directory specifically demonstrates reverse engineering of relational schema for a JSON object data model.
 
-Please see the Reverse Engineering section of JDX User Manual for more details (JDX_GENERATE_JSON_MAPPINGS TRUE).
+Please see the Reverse Engineering section of JDX User Manual shipped with Gilhari SDK for more details.
 
 - It is assumed that the environment variable JX_HOME is set to the top level directory where JDX ORM SDK has been installed.
 
@@ -19,5 +19,3 @@ Please see the Reverse Engineering section of JDX User Manual for more details (
 - You may manually modify the reverse engineered files as per your needs. For example, you may remove/modify some attributes of the generated class and their mappings.
 
 - You may compile the reverse engineere classes with a script like compile.cmd file.
-
-- You may run the JDXDemo GUI program using the script file JDXDemo.bat. The configuration information about the classes for the JDXDemo program is specified in the comgig\JDXDemo.config file.
