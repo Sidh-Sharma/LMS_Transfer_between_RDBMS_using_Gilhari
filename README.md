@@ -44,5 +44,4 @@ The project shows:
 
 * ```docs``` contains the ER diagram of the database which makes the details in the OR-Mapping file clearer. 
 
-[!NOTE]
-Gilhari is a product of Software Tree, LLC. Use is permitted only with a valid license as issued by Software Tree, LLC. FOr more information, please refer to Software Tree's [website](https://www.softwaretree.com)
+[!NOTE] Gilhari is a product of Software Tree, LLC. Use is permitted only with a valid license as issued by Software Tree, LLC. FOr more information, please refer to Software Tree's [website](https://www.softwaretree.com)
