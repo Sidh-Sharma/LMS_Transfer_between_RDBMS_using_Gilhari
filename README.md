@@ -8,9 +8,9 @@ The project shows:
 
 ## Description ##
 
-* The project simulates a library management system. On the "server" side, there is a MySQL source database with tables with data of Books, Authors, Members and Loans. On the "client" side, there is a Postgres destination database with tables for each member to store each member's loan history. 
+* The project simulates a library management system. On the "server" side, there is a MySQL source database with tables with data of Books, Authors, Members and Loans. On the "client" side, there is a Postgres destination database with a table to store loan history (in a chronological order). 
 * There are two gilhari instances listening on two different ports (one each for server and client). The first instance uses GET requests to stream data from the MySQL database. The second instance then uses a POST request to send the retrieved data to the second database.
-* The database agnostic property of Gilhari allows for switching between the two databases very simple and straightforward.
+* The database agnostic property of Gilhari allows for switching between the two databases in a very simple and straightforward manner.
 
 ## Setting up Gilhari ##
 
@@ -42,6 +42,8 @@ The project shows:
     5. To run curl commands as in ```curlPopulate.cmd``` and ```curlStreamData.cmd```, open a new terminal window, navigate to the directory and then run the command files. There should be corresponding activity on the earlier command terminal window below the confirmation message of Gilhari listening at a port (set here to 8081).
     6. Postman can also be used to perfrom REST API calls. Refer to Gilhari_API manual as shipped with the SDK for more details. 
 
+* ```targetdb``` contains scripts to compile Java source files, build Docker image and run it to have the second Gilhari instance listen at ```localhost:8081```. The details are very similar to ```sourcedb``` and self-explanatory.
+  
 * ```docs``` contains the ER diagram of the database which makes the details in the OR-Mapping file clearer. 
 
 >[!NOTE]
