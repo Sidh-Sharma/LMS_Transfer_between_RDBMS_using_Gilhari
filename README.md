@@ -11,7 +11,7 @@ Classname mapping file and .jdx file as mentioned in ```gilhari5_source_mysql_lo
 
 **Installation and Running**
 1. Install Gilhari SDK from https://www.softwaretree.com. Follow README and Manual instructions for correct installation. 
-2. Install and configure Java 8 compiler appropriately. Install database management applications as required. Note: If you are using MySQL 8.0 (anything above 5.7 really), pls install the corresponding newer JDBC driver and place it in the ```external_libs``` directory in the Gilhari SDK. Install and configure Docker engine appropriately.
+2. Install and configure Java 8 compiler appropriately. Install database management applications as required. Note: If you are using MySQL 8.x, pls install the corresponding newer JDBC driver and place it in the ```external_libs``` directory in the Gilhari SDK. Install and configure Docker engine appropriately.
 3. Place the folders ```sourcedb``` and ```reveng``` in the ```examples``` directory of the Gilhari SDK.
 4. To run ```autoPopulate.py```, first navigate to the parent directory and run ```pip install pymysql```. (Not necessary as database has now been populated with data already).
 5. In the command terminal, navigate to ```sourcedb``` as in your configuration, and run the command files ```compile.cmd```, ```build.cmd``` and ```run_docker_app.cmd``` in order. 
