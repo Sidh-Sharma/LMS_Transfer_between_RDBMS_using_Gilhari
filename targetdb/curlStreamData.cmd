@@ -31,6 +31,6 @@ echo. >> curl.log
 
 
 echo ** Query all Loan objects >> curl.log
-curl -X GET "http://localhost:%port%/gilhari/v1/Loan"  -H "Content-Type: application/json" >> curl.log
+curl -X GET "http://localhost:%port%/gilhari/v1/LoanH"  -H "Content-Type: application/json" >> curl.log
 echo. >> curl.log
 echo. >> curl.log
