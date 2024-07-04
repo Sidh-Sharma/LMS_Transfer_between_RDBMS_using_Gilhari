@@ -33,7 +33,7 @@ The project shows:
 
 ## Running the project
 
-* ```curlTranfer.cmd``` can be used to automate the retrieval and transfer process. A record of operations performed is stored in ```curl.txt```.
+* ```curlTranfer``` can be used to automate the retrieval and transfer process. A record of operations performed is stored in ```curl.txt```.
       
 1.  curl commands are used to send GET request to Gilhari on localhost8082.
 
@@ -45,7 +45,7 @@ The project shows:
 
 5. jq is again used to wrap the data with the "entity" keyword and the file ```bin/to_post.json``` is ready to be transferred using a POST request sent by Gilhari on 8083.
 
-* On separate command terminal windows, navigate to ```sourcedb``` and ```targetdb```. Follow README in ```sourcedb``` and ```targetdb``` to run a Gilhari instance each. Now, open a new command terminal window, navigate to this parent directory and run ```curlTransfer.cmd```.
+* On separate command terminal windows, navigate to ```sourcedb``` and ```targetdb```. Follow README in ```sourcedb``` and ```targetdb``` to run a Gilhari instance each. Now, open a new command terminal window, navigate to this parent directory and run ```curlTransfer```.
 
 
 >[!NOTE]
