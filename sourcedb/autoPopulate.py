@@ -52,7 +52,6 @@ def generate_isbn():
     middle = ''.join(random.choices("0123456789", k=9))
     return prefix + middle
 
-
 def generate_json_data():
     authors = []
     books = []
@@ -106,8 +105,12 @@ def generate_json_data():
     for _ in range(55):
         book_id = random.choice(book_ids)
         member_id = random.choice(member_ids)
-        loan_date = f"2024-{random.randint(1, 12):02}-{random.randint(1, 28):02}"
-        return_date = f"2024-{random.randint(1, 12):02}-{random.randint(1, 28):02}"
+        loan_month = random.randint(1, 11)
+        loan_day = random.randint(1, 28)
+        loan_date = f"2024-{loan_month:02}-{loan_day:02}"
+        return_month = loan_month + 1
+        return_day = loan_day 
+        return_date = f"2024-{return_month:02}-{return_day:02}"
         loans.append((book_id, member_id, loan_date, return_date))
 
     cursor.executemany("INSERT INTO Loans (book_id, member_id, loan_date, return_date) VALUES (%s, %s, %s, %s)", loans)

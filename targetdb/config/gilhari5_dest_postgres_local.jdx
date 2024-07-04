@@ -5,14 +5,14 @@ JDX_SUPERCLASS_NAME com.softwaretree.jdx.JDX_JSONObject
 ;
 
 CLASS .LoanHist TABLE loans
-    VIRTUAL_ATTRIB sno ATTRIB_TYPE int
     VIRTUAL_ATTRIB book_id ATTRIB_TYPE int
     VIRTUAL_ATTRIB loan_id ATTRIB_TYPE int
     VIRTUAL_ATTRIB member_id ATTRIB_TYPE int
     VIRTUAL_ATTRIB return_date ATTRIB_TYPE java.lang.String
     VIRTUAL_ATTRIB loan_date ATTRIB_TYPE java.lang.String
-    
-    PRIMARY_KEY sno
-    SQLMAP FOR sno SQLTYPE 'INTEGER AUTO_INCREMENT'
-
+    PRIMARY_KEY loan_id 
+    SQLMAP FOR book_id NULLABLE
+    SQLMAP FOR member_id NULLABLE
+    SQLMAP FOR return_date NULLABLE
+    SQLMAP FOR loan_date NULLABLE
 ;
