@@ -29,25 +29,6 @@ The project shows:
 * Install jq, a command line JSON processor, from the official [source](https://jqlang.github.io/jq/). jq will help treatment of retrieved JSON data before tranfer to second database.
 
 ## Running the project
-* ```reveng``` contains files to Reverse Engineer java container classes and declare the Object Relational Mapping (ORM) specification file.
-    1. Refer to the README for more details.
-    2. Change the Database URL and driver in the .config file as required.
-        > You may consider using an existing database that you are comfortable with to use for your requirements. 
-
-* ```sourcedb``` contains scripts to compile Java source files, build Docker image and run it to have the first Gilhari instance listen at ```localhost:8081```.
-    1. In ```sourcedb/src/com/mycompany/gilhari5```, create a class file Author.java as shown to create a JDX_JSONObject (derived from Software Tree's JDX). These files are as created by ```reveng/JDXReverseEngineer```. 
-    2. The ```compile.cmd``` compiles all the added Java files in the above directory.
-    >Note: Add the references and names to the java files in ```sources.txt``` appropriately.
-    >Optionally to the run this application as a standalone- in the lib/ directory, add the requirements as .jar files (here, a jdx-json package and jxclasses.jar, found in the libs/ directory of the Gilhari SDK installation).  
-    3. Classname mapping file and .jdx file as mentioned in ```gilhari5_source_mysql_local.config``` can be found in ```sourcedb/config```. You may edit attributes and relations in the ORM specification file as required. Add the appropriate JDBC driver for your database in the same ```./config``` directory.
-    4. Create a docker file as shown and run ```build.cmd``` to build the docker image. Then use ```run_docker_app.cmd``` to run the image.
-    5. To run curl commands as in ```curlPopulate.cmd``` and ```curlStreamData.cmd```, open a new terminal window, navigate to the directory and then run the command files. There should be corresponding activity on the earlier command terminal window below the confirmation message of Gilhari listening at a port (set here to 8082).
-    6. Postman can also be used to perfrom REST API calls. Refer to Gilhari_API manual as shipped with the SDK for more details. 
-
-* ```targetdb``` contains scripts to compile Java source files, build Docker image and run it to have the second Gilhari instance listen at ```localhost:8081```. The details are very similar to ```sourcedb``` and self-explanatory.
-
-  
-* On separate command terminal windows, navigate to ```sourcedb``` and ```targetdb```. On each window, get Gilhari running. Now, open a new command terminal window, navigate to this parent directory and run ```curlTransfer.cmd```.
 
 * ```curlTranfer.cmd``` can be used to automate the retrieval and transfer process. A record of operations performed is stored in ```curl.txt```.
       1. curl commands are used to send GET request to Gilhari on localhost8082.
@@ -56,8 +37,8 @@ The project shows:
       4. Next step is to clear any pre-existing data in the Postgres database by using Gilhari to send DELETE request on 8083.
       5. jq is again used to wrap the data with the "entity" keyword and the file ```bin/to_post.json``` is ready to be transferred using a POST request sent by Gilhari on 8083.
 
+* On separate command terminal windows, navigate to ```sourcedb``` and ```targetdb```. Follow README in ```sourcedb``` and ```targetdb``` to run a Gilhari instance each. Now, open a new command terminal window, navigate to this parent directory and run ```curlTransfer.cmd```.
 
-* ```docs``` contains the ER diagram of the database which makes the details in the OR-Mapping file clearer. 
 
 >[!NOTE]
 >Gilhari is a product of Software Tree, LLC. Use is permitted only with a valid license as issued by Software Tree, LLC. FOr more information, please refer to Software Tree's [website](https://www.softwaretree.com)
