@@ -49,4 +49,3 @@ echo ** END OUTPUT ** >> curl.log
 echo. >> curl.log
 
 cat curl.log \\for Unix based systems (Linux, MacOS)
-type curl.log \\for Windows
