@@ -6,7 +6,7 @@ The structure and execution is very similar to ```examples/gilhari_simple_exampl
 
 * In ```sourcedb/src/com/mycompany/gilhari5```, create a class file Author.java as shown to create a JDX_JSONObject (derived from Software Tree's JDX). These files are as created by ```reveng/JDXReverseEngineer```. 
     
-* The ```compile.cmd``` compiles all the added Java files in the above directory.
+* The ```compile``` script compiles all the added Java files in the above directory.
     >Note: Add the references and names to the java files in ```sources.txt``` appropriately.
     >Optionally to the run this application as a standalone- in the lib/ directory, add the requirements as .jar files (here, a jdx-json package and jxclasses.jar, found in the libs/ directory of the Gilhari SDK installation).  
 
