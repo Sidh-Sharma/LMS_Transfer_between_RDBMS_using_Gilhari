@@ -1,0 +1,1 @@
+* ```targetdb``` contains scripts to compile Java source files, build Docker image and run it to have the second Gilhari instance listen at ```localhost:8083```. The details are very similar to ```sourcedb``` and self-explanatory.
