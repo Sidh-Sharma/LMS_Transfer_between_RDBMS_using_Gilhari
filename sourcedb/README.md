@@ -12,8 +12,8 @@ The structure and execution is very similar to ```examples/gilhari_simple_exampl
 
 * Classname mapping file and .jdx file as mentioned in ```gilhari5_source_mysql_local.config``` can be found in ```sourcedb/config```. You may edit attributes and relations in the ORM specification file as required. Add the appropriate JDBC driver for your database in the same ```./config``` directory.
     
-* Create a docker file as shown and run ```build.cmd``` to build the docker image. Then use ```run_docker_app.cmd``` to run the image.
+* Create a docker file as shown and run ```build``` to build the docker image. Then use ```run_docker_app``` to run the image.
     
-* To run curl commands as in ```curlPopulate.cmd``` and ```curlStreamData.cmd```, open a new terminal window, navigate to the directory and then run the command files. There should be corresponding activity on the earlier command terminal window below the confirmation message of Gilhari listening at a port (set here to 8082).
+* To run curl commands as in ```curlPopulate``` and ```curlStreamData```, open a new terminal window, navigate to the directory and then run the command files. There should be corresponding activity on the earlier command terminal window below the confirmation message of Gilhari listening at a port (set here to 8082).
     
 * Postman can also be used to perfrom REST API calls. Refer to Gilhari_API manual as shipped with the SDK for more details. 
