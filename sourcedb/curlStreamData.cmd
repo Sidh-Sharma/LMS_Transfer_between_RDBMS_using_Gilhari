@@ -1,6 +1,6 @@
 REM  A script to invoke some sample curl commands on a Windows machine
 REM  against a running container image of the app-specific Gilhari microservice 
-REM  gilhari_source_mysql_local:2.0.
+REM  gilhari_source_mysql_local:3.0.
 REM
 REM  The responses are recorded in a log file (curl.log).
 REM
@@ -18,7 +18,7 @@ SET port=%1
 GOTO Proceed
 
 :DefaultPort
-SET port=80
+SET port=8082
 GOTO Proceed
 
 :Proceed

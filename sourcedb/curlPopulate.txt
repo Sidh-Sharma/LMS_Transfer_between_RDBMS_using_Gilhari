@@ -1,5 +1,5 @@
 REM A script to insert 50 Employee JSON objects into a running container image 
-REM of the app-specific Gilhari microservice gilhari5_source(mysql)_local:1.0.
+REM of the app-specific Gilhari microservice gilhari5_source_mysql_local:3.0.
 REM
 REM The responses are recorded in a log file (curl.log).
 REM
@@ -12,7 +12,7 @@ SET port=%1
 GOTO Proceed
 
 :DefaultPort
-SET port=80
+SET port=8082
 GOTO Proceed
 
 :Proceed
