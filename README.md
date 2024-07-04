@@ -1,6 +1,9 @@
 # Library Management System using Gilhari microservice
 ## Overview ##
+Gilhari microservice framework is a product of Software Tree. Gilhari, available in a Docker image, is configurable as per an application specific object and relational models. Gilhari exposes a REST interface to provide APIs (POST, GET, PUT, DELETE…) for CRUD (Create, Retrieve, Update, and Delete) operations on the application specific JSON objects. We don't need to write any code to handle the REST APIs or to access the database.
+
 This project is an example of how Gilhari microservice framework can be used to transfer (JSON) data between two relational databases of different kinds (MySQL and Postgres).
+
 The project shows:
 * Reverse-engineering of a JSON object model (and its object relational mapping) from the first relational database having an existing schema (by using the JDX ORM).
 * Populating the first database DB1 with x number of JSON objects by using Java/Python program or by configuring and using the Gilhari microservice framework (curl commands to perform POST requests). (Optional if DB1 already has the data that needs to be transferred)
@@ -31,15 +34,16 @@ The project shows:
 ## Running the project
 
 * ```curlTranfer.cmd``` can be used to automate the retrieval and transfer process. A record of operations performed is stored in ```curl.txt```.
-      1.  curl commands are used to send GET request to Gilhari on localhost8082.
-
-      2. This JSON data is then stored in the ```bin``` directory as ```loans.json```.
       
-      3. Subsquent jq commands allow for sorting of the data on the command line itself. Here, the return_date attribute is used to sort the data, stored as ```bin/sorted_loans.json```.
+1.  curl commands are used to send GET request to Gilhari on localhost8082.
 
-      4. Next step is to clear any pre-existing data in the Postgres database by using Gilhari to send DELETE request on 8083.
+2. This JSON data is then stored in the ```bin``` directory as ```loans.json```.
+      
+3. Subsquent jq commands allow for sorting of the data on the command line itself. Here, the return_date attribute is used to sort the data, stored as ```bin/sorted_loans.json```.
 
-      5. jq is again used to wrap the data with the "entity" keyword and the file ```bin/to_post.json``` is ready to be transferred using a POST request sent by Gilhari on 8083.
+4. Next step is to clear any pre-existing data in the Postgres database by using Gilhari to send DELETE request on 8083.
+
+5. jq is again used to wrap the data with the "entity" keyword and the file ```bin/to_post.json``` is ready to be transferred using a POST request sent by Gilhari on 8083.
 
 * On separate command terminal windows, navigate to ```sourcedb``` and ```targetdb```. Follow README in ```sourcedb``` and ```targetdb``` to run a Gilhari instance each. Now, open a new command terminal window, navigate to this parent directory and run ```curlTransfer.cmd```.
 
