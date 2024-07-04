@@ -1,6 +1,9 @@
 # Library Management System using Gilhari microservice
 ## Overview ##
+Gilhari microservice framework is a product of Software Tree. Gilhari, available in a Docker image, is configurable as per an application specific object and relational models. Gilhari exposes a REST interface to provide APIs (POST, GET, PUT, DELETE…) for CRUD (Create, Retrieve, Update, and Delete) operations on the application specific JSON objects. We don't need to write any code to handle the REST APIs or to access the database.
+
 This project is an example of how Gilhari microservice framework can be used to transfer (JSON) data between two relational databases of different kinds (MySQL and Postgres).
+
 The project shows:
 * Reverse-engineering of a JSON object model (and its object relational mapping) from the first relational database having an existing schema (by using the JDX ORM).
 * Populating the first database DB1 with x number of JSON objects by using Java/Python program or by configuring and using the Gilhari microservice framework (curl commands to perform POST requests). (Optional if DB1 already has the data that needs to be transferred)
